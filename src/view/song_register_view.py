@@ -18,6 +18,7 @@ class SongRegisterView:
 
         return new_song_informations
 
+
     def registry_song_success(self, controller_response: dict) -> None:
         self.__clear()
 
@@ -32,6 +33,7 @@ class SongRegisterView:
         )
         print(message)
 
+
     def registry_song_error(self, controller_message: dict) -> None:
         self.__clear()
         
@@ -43,6 +45,7 @@ class SongRegisterView:
             controller_message["error"]
         )
         print(message)
-    
+
+
     def __clear(self):
         os.system('cls||clear')

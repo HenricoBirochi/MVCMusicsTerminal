@@ -1,6 +1,4 @@
 class SongRegisterController:
-
-
     def insert(self, new_song_informations: dict) -> dict:
         # Principio de Responsabilidade Única
         try:

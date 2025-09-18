@@ -1,4 +1,6 @@
 class SongRegisterController:
+
+
     def insert(self, new_song_informations: dict) -> dict:
         # Principio de Responsabilidade Única
         try:
@@ -9,21 +11,27 @@ class SongRegisterController:
         except Exception as e:
             return self.__format_error_response(e)
 
+
     def __verify_songs_infos(self, new_song_informations: dict) -> None:
         if len(new_song_informations["title"]) > 100:
             raise Exception("O título da música deve ter no máximo 100 caracteres.")
         
-        year = int(new_song_informations["year"])
+        year = new_song_informations["year"]
+        if year is not int:
+            raise Exception("O ano da música deve ser um número inteiro.")
         if year > 2025:
             raise Exception("O ano da música não pode ser maior que 2025.")
+
 
     def __verify_if_song_already_registered(self, new_song_informations: dict) -> None:
         # Interecao com Models
         pass
 
+
     def __insert_song(self, new_song_informations: dict) -> None:
         # Interecao com Models
         pass
+
 
     def __format_response(self, new_song_informations: dict) -> dict:
         return {
@@ -33,7 +41,8 @@ class SongRegisterController:
                 "title": new_song_informations["title"],
             }
         }
-    
+
+
     def __format_error_response(self, err: Exception) -> dict:
         return {
             "success": False,

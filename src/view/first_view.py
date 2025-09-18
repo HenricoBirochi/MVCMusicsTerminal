@@ -7,6 +7,7 @@ def introduction_page() -> str:
     """
 
     print(message)
-    command = input("Comando: \n")
+    command = input("Comando: ")
+    print("\n")  # pular linha
 
     return command

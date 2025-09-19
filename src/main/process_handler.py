@@ -8,7 +8,6 @@ def start() -> None:
         command = introduction_page()
 
         if command == "1": song_register_process()
-        elif command == "2": print("Creating playlist...")
-        elif command == "3": song_all_process()
+        elif command == "2": song_all_process()
         elif command == "5": exit()
         else: print("Invalid command, please try again.")

@@ -3,6 +3,7 @@ def introduction_page() -> str:
         Music System
     1. Insert new music - 1
     2. Create playlist - 2
+    3. View musics registered - 3
     5. Exit - 5
     """
 

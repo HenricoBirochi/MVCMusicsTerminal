@@ -1,4 +1,4 @@
-# Nome do Projeto
+# MVC Musics Terminal
 
 ## 📌 Sobre o Projeto
 - Explicar que foi feito em Python
